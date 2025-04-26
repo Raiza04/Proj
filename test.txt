@@ -1,6 +1,0 @@
-\documentclass{article}
-
-
-\begin{document}
-Hello, LaTeX on Ubuntu!
-\end{document}
