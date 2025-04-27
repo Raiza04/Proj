@@ -11,12 +11,12 @@ private:
 public:
 
     
-    void create(const string file);
+    void create();
     void save();
-    void load(const string file);
-    void edit(const string file);
-    void del(const string file);
-    void show(const string file);
+    void load(const string& file);
+    void write();
+    void del();
+    void show();
 
 };
 

@@ -1,6 +1,8 @@
 #include "editor.hpp"
 
-void Editor::create(const string file){
+void Editor::create(){
+    content = "";
+    cout << "New file has been created ... \n";
 
 }
 
@@ -10,21 +12,58 @@ void Editor::save(){
         cout << "No file provided. Enter the name of the file you wnat to save ..." << endl;
         getline(std::cin, filename);
     }
+
+    ofstream out(filename);
+    if (out)
+    {
+        out << content;
+        out.close();
+        cout << "DThe file has been saved ... \n";
+    } else {
+        cout << "Error. The file could not be loaded ... \n";
+    }
+}
+
+void Editor::load(const string& file){
+    ifstream in(file);
+    if(in){
+        filename = file;
+        content = "";
+        string line;
+        while (getline(cin, line))
+        {
+            content += line + "\n";
+        }
+        in.close();
+        cout << "File successfully loaded ... \n";
+    } else {
+        cout << "Failed to load the file ... \n";
+    }
+}
+
+void Editor::write(){
+    string line;
+    getline(cin, line);
+    content += line + "\n";
+}
+
+void Editor::del(){
+    ofstream out(filename);
+
+    if (out)
+    {
+        content = "";
+    }
+    
     
 }
 
-void Editor::load(const string file){
+void Editor::show(){
 
-}
-
-void Editor::edit(const string file){
-
-}
-
-void Editor::del(const string file){
-
-}
-
-void Editor::show(const string file){
-
+    string text;    
+    while (getline(cin, text))
+    {
+        cout << text << endl;
+    }
+    
 }
