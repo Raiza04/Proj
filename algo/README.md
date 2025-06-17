@@ -62,7 +62,7 @@ This script will:
 
 Open main.cpp and choose which sorting algorithm you want to visualize by commenting/uncommenting the corresponding lines:
 
-´´´cpp
+´´´
 
 // bubbleSort(window, values);
 // quicksort(window, values, 0, values.size() - 1);
