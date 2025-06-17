@@ -6,4 +6,5 @@ This repository is about small and simple projects which are meant to show the k
 | Project | Language written in |
 |------- | --- |
 | Mini text editor | c++ |
-|todo list | c++ |
+| todo list | c++ |
+| Algo sorting visualisation | c++ with sfml | 

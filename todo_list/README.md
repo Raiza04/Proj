@@ -1,7 +1,7 @@
 # Todo List (Terminal)
 
 **Description**  
-This project is a simple todo list that runs on the terminal and only uses standard C++ libraries.  
+This project is a simple todo list that runs in the terminal and only uses standard C++ libraries.  
 
 **Important:**  
 Make sure you execute the program while your are in the directory where data.txt is
