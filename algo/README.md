@@ -58,7 +58,9 @@ This script will:
  - Compile the project
  - Run the visualizer
 
-## Usage
+---
+
+## 🪄 Usage
 
 Open main.cpp and choose which sorting algorithm you want to visualize by commenting/uncommenting the corresponding lines:
 
