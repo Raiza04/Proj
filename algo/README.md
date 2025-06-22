@@ -72,6 +72,15 @@ mergesort(window, values, 0, values.size() - 1); <br>
 
 ```
 
+You can also adjust the variables in inc/main.hpp <br>
+
+```cpp
+
+#define BAR_NUM 150.0 //changes the number to adjust the number of bars to sort. keep it float e.g x.0
+#define SLEEP 0 // changes the speed of displaying the changes
+
+```
+
 Then rebuild and run again with
 
 ```bash
@@ -80,3 +89,4 @@ Then rebuild and run again with
 
 ```
 
+---

@@ -27,7 +27,7 @@ int main() {
         if (!sorted(values)) {
             //quicksort(window, values, 0, values.size() - 1);
             //mergesort(window, values, 0, values.size() - 1);
-            //sort.step(values, window);
+            //sort.step(values, window); //Bubblesort
         }
 }
 
