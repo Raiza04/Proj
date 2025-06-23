@@ -7,4 +7,4 @@ cmake ..
 make clean
 make
 cd ..
-./build/gravity
+./build/executive

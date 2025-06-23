@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(gravity)
+project(collision_simulation)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -30,7 +30,7 @@ if(NOT SFML_FOUND)
 endif()
 
 # Executable
-add_executable(gravity main.cpp)
+add_executable(executive main.cpp)
 
 # Verlinke Bibliothek (egal ob lokal oder von FetchContent)
-target_link_libraries(gravity sfml-graphics sfml-window sfml-system)
+target_link_libraries(executive sfml-graphics sfml-window sfml-system)

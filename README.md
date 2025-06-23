@@ -8,3 +8,4 @@ This repository is about small and simple projects which are meant to show the k
 | Mini text editor | c++ |
 | todo list | c++ |
 | Algo sorting visualisation | c++ with sfml | 
+| Ball collision simulation | c++ with sfml |

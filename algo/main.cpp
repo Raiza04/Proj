@@ -23,11 +23,11 @@ int main() {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-
+        
         if (!sorted(values)) {
             //quicksort(window, values, 0, values.size() - 1);
             //mergesort(window, values, 0, values.size() - 1);
-            //sort.step(values, window); //Bubblesort
+            sort.step(values, window); //Bubblesort
         }
 }
 
