@@ -8,11 +8,11 @@
 #include <cstdlib>
 #include <ctime>
 
-#define BAR_NUM 150.0
+#define BAR_NUM 200.0 // adjust the number of bars to sort
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
 #define BAR_WIDTH WINDOW_WIDTH / BAR_NUM
-#define SLEEP 0
+#define SLEEP 12 //adjust the speed to visulize
 
 void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr){
     window.clear(sf::Color::Black);

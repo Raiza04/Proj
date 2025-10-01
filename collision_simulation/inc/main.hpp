@@ -11,11 +11,11 @@
 
 constexpr int WINDOW_WIDTH = 800;
 constexpr int WINDOW_HEIGHT = 600;
-constexpr int COLOR_NUM = 7;
-constexpr int BALL_BOUND = 20;
-constexpr float BALL_RADIUS = 13.0f;
+constexpr int COLOR_NUM = 7; // number of colors for balls
+constexpr int BALL_BOUND = 50; // max number of ball that can spawn
+constexpr float BALL_RADIUS = 10.0f; // radius of each all ball in the bigger ball
 
-constexpr float CELL_SIZE = 80.0f;  // Should be > 2*max_ball_radius
+constexpr float CELL_SIZE = 80.0f;  // Should be > 2*ball_radius
 constexpr int GRID_WIDTH = static_cast<int>(WINDOW_WIDTH / CELL_SIZE) + 1;
 constexpr int GRID_HEIGHT = static_cast<int>(WINDOW_HEIGHT / CELL_SIZE) + 1;
 

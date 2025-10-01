@@ -157,9 +157,9 @@ private:
     const float radius;
     const float gravity = 9.81f;
     const float deltaTime = 0.2f;
-    const float resistance = 0.98f;
-    const float elasticity = 1.0f;
-    const float groundFriction = 0.7f;
+    const float resistance = 0.98f; // other resistencas like air
+    const float elasticity = 0.97f; // bouncing factor [0.0,1.0]
+    const float groundFriction = 0.98f; // ground frinction that slows the balls if they touch ground [0.0, 1.0]
     const float minVelocity = 5.0f;
     sf::Vector2f velocity;
     sf::CircleShape ball;
