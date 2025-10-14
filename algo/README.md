@@ -31,26 +31,19 @@ sudo apt install cmake
 
 ```
 
-### Step 2: Grant premission
+For other OS such as mac os or windows you might have to compile it completly different then what is shown here.
 
-In case you get errors stating that you lack premission to execute the build file you can do that with
+### Step 2 build and compile
 
-```bash
-
-chmod +x build.sh
-
-```
-This line grants the build file the execution premission.
-
-### Step 3: build and compile
-
-By simply running the command below you can build and compile the project
+By simply running the command below you can build and compile the project with this line
 
 ```bash
 
 ./build.sh
 
 ```
+
+Make sure that you are in the right directory (algo folder) to avoid errors
 
 This script will:
 
@@ -60,7 +53,21 @@ This script will:
  - Compile the project
  - Run the visualizer
 
+**Note** that it is possible that the build.sh might not work on other OS than linux since it contains linux commands
+
 ---
+
+### Hint: Grant Premission
+
+In case you get errors stating that you lack premission to execute the build file you can fix it by running this line of code in your linux terminal
+
+```bash
+
+chmod +x build.sh
+
+```
+
+This line grants the build file the execution premission.
 
 ## 🪄 Usage
 
