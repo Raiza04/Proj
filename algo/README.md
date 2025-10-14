@@ -86,8 +86,8 @@ You can also adjust the variables in inc/main.hpp <br>
 
 ```cpp
 
-#define BAR_NUM 150.0 //changes the number to adjust the number of bars to sort. keep it float e.g x.0
-#define SLEEP 0 // changes the speed of displaying the changes
+#define BAR_NUM 200.0 // adjust the number of bars to sort
+#define SLEEP 0 //adjust the speed to visulize
 
 ```
 
