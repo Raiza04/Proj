@@ -2,6 +2,7 @@
 #include "inc/bubblesort.hpp"
 #include "inc/quicksort.hpp"
 #include "inc/mergesort.hpp"
+#include "inc/insertion.hpp"
 
 
 int main() {
@@ -27,7 +28,8 @@ int main() {
         if (!sorted(values)) {
             //quicksort(window, values, 0, values.size() - 1);
             //mergesort(window, values, 0, values.size() - 1);
-            sort.step(values, window); //Bubblesort
+            //sort.step(values, window); //Bubblesort
+            insertion(window, values);
         }
 }
 

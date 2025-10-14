@@ -1,5 +1,4 @@
-#ifndef MERGESORT_HPP
-#define MERGESORT_HPP
+#pragma once
 
 #include "main.hpp"
 
@@ -55,5 +54,3 @@ void mergesort(sf::RenderWindow& window, std::vector<int>& arr, int left, int ri
     mergesort(window, arr, mid + 1, right);
     merge(window, arr, left, mid, right);
 }
-
-#endif

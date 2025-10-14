@@ -1,5 +1,4 @@
-#ifndef QUICKSORT_HPP
-#define QUICKSORT_HPP
+#pragma once
 
 #include "main.hpp"
 
@@ -29,5 +28,3 @@ void quicksort(sf::RenderWindow& window, std::vector<int>& arr, int low, int hig
         quicksort(window, arr, pi + 1, high);
     }
 }
-
-#endif

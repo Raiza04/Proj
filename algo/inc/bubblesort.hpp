@@ -1,5 +1,4 @@
-#ifndef BUBBLESORT_HPP
-#define BUBBLESORT_HPP
+#pragma once
 
 #include "main.hpp"
 
@@ -27,6 +26,3 @@ struct BubbleSortState {
         }
     }
 };
-
-
-#endif

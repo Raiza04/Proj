@@ -1,5 +1,4 @@
-#ifndef MAIN_HPP
-#define MAIN_HPP
+#pragma once
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
@@ -12,7 +11,7 @@
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
 #define BAR_WIDTH WINDOW_WIDTH / BAR_NUM
-#define SLEEP 12 //adjust the speed to visulize
+#define SLEEP 0 //adjust the speed to visulize
 
 void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr){
     window.clear(sf::Color::Black);
@@ -39,7 +38,7 @@ void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr){
     }
 
     window.display();
-    //sf::sleep(sf::milliseconds(SLEEP));
+    sf::sleep(sf::milliseconds(SLEEP));
 }
 
 bool sorted(std::vector<int>& arr){
@@ -51,6 +50,3 @@ bool sorted(std::vector<int>& arr){
     }
     return true;
 }
-
-
-#endif

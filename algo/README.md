@@ -7,6 +7,7 @@ This project visualizes some of the most well-known sorting algorithms using **S
 - 🫧 **Bubble Sort**
 - ⚡ **Quick Sort**
 - 🧩 **Merge Sort**
+- 🎚️ **Insertion Sort**
 
 ---
 
@@ -32,13 +33,14 @@ sudo apt install cmake
 
 ### Step 2: Grant premission
 
-To be able to execute the build file you have to grant it execution premission. You can do that with
+In case you get errors stating that you lack premission to execute the build file you can do that with
 
 ```bash
 
 chmod +x build.sh
 
 ```
+This line grants the build file the execution premission.
 
 ### Step 3: build and compile
 
@@ -66,9 +68,10 @@ Open main.cpp and choose which sorting algorithm you want to visualize by commen
 
 ```cpp
 
-// bubbleSort(window, values); <br>
-// quicksort(window, values, 0, values.size() - 1); <br>
-mergesort(window, values, 0, values.size() - 1); <br>
+//quicksort(window, values, 0, values.size() - 1); <br>
+//mergesort(window, values, 0, values.size() - 1); <br>
+//sort.step(values, window); //Bubblesort <br>
+insertion(window, values);
 
 ```
 
