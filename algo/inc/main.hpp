@@ -7,7 +7,7 @@
 #include <cstdlib>
 #include <ctime>
 
-#define BAR_NUM 200.0 // adjust the number of bars to sort
+#define BAR_NUM 100.0 // adjust the number of bars to sort
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
 #define BAR_WIDTH WINDOW_WIDTH / BAR_NUM

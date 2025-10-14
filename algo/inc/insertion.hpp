@@ -15,4 +15,6 @@ void insertion(sf::RenderWindow& window, std::vector<int>& arr){
         arr[j+1] = key;
         drawArr(window, j + 1, arr); 
     }
+
+    drawArr(window, arr.size()-1, arr); 
 }
