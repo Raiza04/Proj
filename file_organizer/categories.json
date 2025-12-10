@@ -1,7 +1,8 @@
 {
-  "Documents": [".pdf", ".doc", ".docx", ".txt", ".md"],
+  "Documents": [".pdf", ".doc", ".docx", ".txt", ".md" , ".rtf", ".ott"],
   "Images":    [".jpg", ".jpeg", ".png", ".gif", ".bmp"],
   "Videos":    [".mp4", ".avi", ".mov", ".mkv"],
   "Music":     [".mp3", ".wav", ".flac"],
+  "Zip":       [".zip"],
   "Misc":      []
 }
