@@ -87,8 +87,7 @@ int main(int argc, char* argv[]) {
         v = std::rand() % WINDOW_HEIGHT;
     }
 
-    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), 
-                            "Sort Visualizer - " + config.algorithm + "sort");
+    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT),"Sort Visualizer - " + config.algorithm + "sort");
 
     if (config.algorithm == "quick") {
         quicksort(window, values, 0, values.size() - 1);

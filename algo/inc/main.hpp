@@ -17,19 +17,18 @@ extern int BAR_NUM;
 extern float BAR_WIDTH;
 extern int SLEEP_MS;
 
-// Konfigurationsstruktur
+//vibe coded
 struct Config {
     std::string algorithm = "bubble";
     int bar_num = 300;
     int sleep_ms = 10;
 };
 
-// Funktionsdeklarationen
+//vibe coded
 Config parseArguments(int argc, char* argv[]);
 void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr);
 bool sorted(std::vector<int>& arr);
 
-// Implementierungen
 inline void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr) {
     window.clear(sf::Color::Black);
     
