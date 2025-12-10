@@ -1,102 +1,146 @@
-# Sorting Algorithm Visualizer
+# 🎨 Sort Visualizer
 
-This project visualizes some of the most well-known sorting algorithms using **SFML (Simple and Fast Multimedia Library)**. It provides a real-time graphical view of how each algorithm sorts an array of randomly generated bars.
+A real-time sorting algorithm visualization tool built with C++ and SFML. Watch Bubble Sort, Quick Sort, Merge Sort, and Insertion Sort come to life with fully customizable parameters.
 
-## ✨ Supported Sorting Algorithms
+![Sort Visualizer Demo](https://via.placeholder.com/800x400?text=Sorting+Visualizer+Demo)
 
-- 🫧 **Bubble Sort**
-- ⚡ **Quick Sort**
-- 🧩 **Merge Sort**
-- 🎚️ **Insertion Sort**
+## ✨ Features
 
----
+- **4 Sorting Algorithms**: Bubble, Quick, Merge, and Insertion Sort
+- **Real-time Visualization**: See every comparison and swap as it happens
+- **Fully Customizable**: Control algorithm, bar count, and speed via CLI
+- **Argument Order Independence**: Flags can be used in any order
+- **Auto-Scaling**: Dynamic bar width fits any window size
+- **User-Friendly Build**: CMake + build script handles dependencies automatically
 
-## 🛠 Requirements
+## 📋 Requirements
 
-- A C++ compiler (supporting C++11 or later)
-- [CMake](https://cmake.org/)
-- SFML (automatically handled by CMake)
+- **C++17** compatible compiler (GCC, Clang, MSVC)
+- **CMake** 3.10+ (for build configuration)
+- **No manual library installation needed** - CMake handles SFML automatically!
 
----
+## 🛠️ Quick Start
 
-## 🐧 Installation (Linux)
-
-### Step 1: Install CMake
-
-For Ubuntu/Debian-based systems:
-
+### 1. Clone Repository
 ```bash
-
-sudo apt install cmake
-
+git clone <repository-url>
+cd algo
 ```
 
-For other OS such as mac os or windows you might have to compile it completly different then what is shown here.
-
-### Step 2 build and compile
-
-By simply running the command below you can build and compile the project with this line
-
+### 2. Build & Run
 ```bash
-
-./build.sh
-
-```
-
-Make sure that you are in the right directory (algo folder) to avoid errors
-
-This script will:
-
- - Create the build/ directory if it doesn't exist
- - Run CMake to configure the project
- - Clean previous build files
- - Compile the project
- - Run the visualizer
-
-**Note** that it is possible that the build.sh might not work on other OS than linux since it contains linux commands
-
----
-
-### Hint: Grant Premission
-
-In case you get errors stating that you lack premission to execute the build file you can fix it by running this line of code in your linux terminal
-
-```bash
-
+# Make build script executable (first time only)
 chmod +x build.sh
 
-```
-
-This line grants the build file the execution premission.
-
-## 🪄 Usage
-
-Open main.cpp and choose which sorting algorithm you want to visualize by commenting/uncommenting the corresponding lines:
-
-```cpp
-
-//quicksort(window, values, 0, values.size() - 1); <br>
-//mergesort(window, values, 0, values.size() - 1); <br>
-//sort.step(values, window); //Bubblesort <br>
-insertion(window, values);
-
-```
-
-You can also adjust the variables in inc/main.hpp <br>
-
-```cpp
-
-#define BAR_NUM 200.0 // adjust the number of bars to sort
-#define SLEEP 0 //adjust the speed to visulize
-
-```
-
-Then rebuild and run again with
-
-```bash
-
+# Build the project
 ./build.sh
 
+# Run with default settings
+./build/sort
 ```
 
+The `build.sh` script automatically:
+- Creates a build directory
+- Configures CMake
+- Downloads SFML if not found
+- Compiles everything
+- Places executable in `./build/`
+
+## 🚀 Usage
+
+```bash
+./build/sortvis -a <algorithm> -n <bar_count> -s <speed>
+```
+
+### Command-Line Arguments
+
+| Flag | Description | Default | Options |
+|------|-------------|---------|---------|
+| `-a` | Sorting algorithm to visualize | `bubble` | `quick`, `merge`, `insert`, `bubble` |
+| `-n` | Number of bars to sort | `300` | 1 - 800 (max window width) |
+| `-s` | Delay between steps (ms) | `10` | Any non-negative integer |
+
+### Examples
+
+**Quicksort with 150 bars at 5ms speed:**
+```bash
+./build/sortvis -a quick -n 150 -s 5
+```
+
+**Bubblesort with 100 bars at max speed:**
+```bash
+./build/sortvis -a bubble -n 100 -s 0
+```
+
+**Mergesort with default settings:**
+```bash
+./build/sortvis -a merge
+```
+
+**Argument order doesn't matter!**
+```bash
+./build/sortvis -s 20 -n 200 -a insert  # Same as ./sortvis -a insert -n 200 -s 20
+```
+
+## 📁 Project Structure
+
+```
+algo/
+├── CMakeLists.txt       # CMake configuration (handles SFML automatically)
+├── build.sh            # One-click build script
+├── README.md           # This file
+├── main.cpp            # Entry point & argument parsing
+└── inc/
+    ├── main.hpp        # Core functions & global variables
+    ├── bubblesort.hpp  # Bubble Sort implementation
+    ├── quicksort.hpp   # Quick Sort implementation
+    ├── mergesort.hpp   # Merge Sort implementation
+    └── insertion.hpp   # Insertion Sort implementation
+```
+
+## 🎮 Controls & Visuals
+
+- **Close Window**: Click X or press `Alt+F4` / `Cmd+Q`
+- **Visual Indicators**:
+  - ⚪ White bars: Unsorted elements
+  - 🔴 Red bar: Currently being compared/swapped
+- **Real-time Updates**: See algorithm progress step-by-step
+
+## 💡 Pro Tips
+
+- **Smooth animation**: `-s 5` to `-s 20`
+- **Speed testing**: `-s 0` for maximum speed
+- **Better visibility**: `-n 50` to `-n 150`
+- **Quick preview**: Use fewer bars (`-n 50`) for faster demonstration
+
+## 🐛 Troubleshooting
+
+**"SFML download failed"**
+- Check internet connection
+- CMake will fall back to system SFML if available
+- On Linux: `sudo apt-get install libsfml-dev` (Ubuntu/Debian)
+
+**"Invalid bar number" error**
+- Keep `-n` between 1 and 800
+
+**"Unknown algorithm" error**
+- Use exact names: `quick`, `merge`, `insert`, or `bubble`
+
+**CMake version too old**
+- Update CMake: `pip install --upgrade cmake` or download from [cmake.org](https://cmake.org/download/)
+
+## 🤝 Contributing
+
+Feel free to:
+- Submit issues for bugs or feature requests
+- Fork the repo and create pull requests
+- Add new sorting algorithms
+- Improve visualization effects
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
 ---
+
+**Happy Sorting!** Watch those bars dance! 🕺💃

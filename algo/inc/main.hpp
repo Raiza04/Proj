@@ -6,47 +6,53 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
-#define BAR_NUM 500.0 // adjust the number of bars to sort
-#define WINDOW_WIDTH 800
-#define WINDOW_HEIGHT 600
-#define BAR_WIDTH WINDOW_WIDTH / BAR_NUM
-#define SLEEP 10 //adjust the speed to visulize
+// Konstanten
+constexpr int WINDOW_WIDTH = 800;
+constexpr int WINDOW_HEIGHT = 600;
 
-void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr){
+// Externe Variablen (Definition in main.cpp)
+extern int BAR_NUM;
+extern float BAR_WIDTH;
+extern int SLEEP_MS;
+
+// Konfigurationsstruktur
+struct Config {
+    std::string algorithm = "bubble";
+    int bar_num = 300;
+    int sleep_ms = 10;
+};
+
+// Funktionsdeklarationen
+Config parseArguments(int argc, char* argv[]);
+void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr);
+bool sorted(std::vector<int>& arr);
+
+// Implementierungen
+inline void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr) {
     window.clear(sf::Color::Black);
-
+    
     sf::Event event;
     while (window.pollEvent(event)) {
-        if (event.type == sf::Event::Closed)
-            window.close();
+        if (event.type == sf::Event::Closed) window.close();
     }
 
-    for (int i = 0; i < arr.size(); ++i)
-    {
+    for (int i = 0; i < arr.size(); ++i) {
         sf::RectangleShape rect;
         rect.setSize(sf::Vector2f(BAR_WIDTH, arr[i]));
         rect.setPosition(i * BAR_WIDTH, WINDOW_HEIGHT - arr[i]);
-        if (i == index)
-        {
-            rect.setFillColor(sf::Color::Red);
-        } else {
-            rect.setFillColor(sf::Color::White);
-        }
-        
+        rect.setFillColor(i == index ? sf::Color::Red : sf::Color::White);
         window.draw(rect);
     }
 
     window.display();
-    sf::sleep(sf::milliseconds(SLEEP));
+    sf::sleep(sf::milliseconds(SLEEP_MS));
 }
 
-bool sorted(std::vector<int>& arr){
-    for (size_t i = 0; i < arr.size() - 2; i++)
-    {
-        if(arr[i] > arr[i + 1]){
-            return false;
-        }
+inline bool sorted(std::vector<int>& arr) {
+    for (size_t i = 0; i + 1 < arr.size(); ++i) {
+        if (arr[i] > arr[i + 1]) return false;
     }
     return true;
 }

@@ -7,4 +7,3 @@ cmake ..
 make clean
 make
 cd ..
-./build/SortVisualizer

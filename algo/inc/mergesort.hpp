@@ -1,56 +1,32 @@
 #pragma once
-
 #include "main.hpp"
 
-void merge(sf::RenderWindow& window, std::vector<int>& arr, int left, int mid, int right) {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
-
-    std::vector<int> L(n1), R(n2);
-
-    for (int i = 0; i < n1; i++)
-        L[i] = arr[left + i];
-
-    for (int j = 0; j < n2; j++)
-        R[j] = arr[mid + 1 + j];
-
-    int i = 0, j = 0, k = left;
-
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
-            i++;
+inline void merge(sf::RenderWindow& window, std::vector<int>& arr, int left, int mid, int right) {
+    std::vector<int> temp(right - left + 1);
+    int i = left, j = mid + 1, k = 0;
+    
+    while (i <= mid && j <= right) {
+        if (arr[i] <= arr[j]) {
+            temp[k++] = arr[i++];
         } else {
-            arr[k] = R[j];
-            j++;
+            temp[k++] = arr[j++];
         }
-        drawArr(window, k, arr);
-        sf::sleep(sf::milliseconds(SLEEP));
-        k++;
     }
-
-    while (i < n1) {
-        arr[k] = L[i];
-        drawArr(window, k, arr);
-        sf::sleep(sf::milliseconds(SLEEP));
-        i++;
-        k++;
-    }
-
-    while (j < n2) {
-        arr[k] = R[j];
-        drawArr(window, k, arr);
-        sf::sleep(sf::milliseconds(SLEEP));
-        j++;
-        k++;
+    
+    while (i <= mid) temp[k++] = arr[i++];
+    while (j <= right) temp[k++] = arr[j++];
+    
+    for (i = left; i <= right; i++) {
+        arr[i] = temp[i - left];
+        drawArr(window, i, arr);
     }
 }
 
-void mergesort(sf::RenderWindow& window, std::vector<int>& arr, int left, int right) {
-    if (left >= right) return;
-
-    int mid = left + (right - left) / 2;
-    mergesort(window, arr, left, mid);
-    mergesort(window, arr, mid + 1, right);
-    merge(window, arr, left, mid, right);
+inline void mergesort(sf::RenderWindow& window, std::vector<int>& arr, int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        mergesort(window, arr, left, mid);
+        mergesort(window, arr, mid + 1, right);
+        merge(window, arr, left, mid, right);
+    }
 }
