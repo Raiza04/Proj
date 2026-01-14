@@ -7,3 +7,4 @@ cmake ..
 make clean
 make
 cd ..
+./build/sort

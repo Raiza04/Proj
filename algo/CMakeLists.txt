@@ -6,31 +6,27 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(inc)
 
-# Versuche zuerst: lokal installiertes SFML finden
-find_package(SFML 2.5 COMPONENTS graphics window system QUIET)
+# --- SFML IMMER per FetchContent holen (sicherste Methode) ---
+include(FetchContent)
 
-# Wenn nicht gefunden → automatisch herunterladen
-if(NOT SFML_FOUND)
-    message(STATUS "SFML nicht gefunden – wird per FetchContent heruntergeladen...")
+FetchContent_Declare(
+    SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 2.6.1
+)
 
-    include(FetchContent)
-    FetchContent_Declare(
-        SFML
-        GIT_REPOSITORY https://github.com/SFML/SFML.git
-        GIT_TAG 2.6.1
-    )
+# Optionen setzen, damit es schneller baut
+set(SFML_BUILD_AUDIO OFF CACHE BOOL "" FORCE)
+set(SFML_BUILD_NETWORK OFF CACHE BOOL "" FORCE)
+set(SFML_BUILD_TEST_SUITE OFF CACHE BOOL "" FORCE)
+set(SFML_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(SFML_BUILD_DOC OFF CACHE BOOL "" FORCE)
 
-    # Nur notwendige Module bauen
-    set(SFML_BUILD_AUDIO OFF CACHE BOOL "" FORCE)
-    set(SFML_BUILD_NETWORK OFF CACHE BOOL "" FORCE)
-    set(SFML_BUILD_TEST_SUITE OFF CACHE BOOL "" FORCE)
-    set(SFML_USE_SYSTEM_DEPS OFF CACHE BOOL "" FORCE)
+# SFML bereitstellen
+FetchContent_MakeAvailable(SFML)
 
-    FetchContent_MakeAvailable(SFML)
-endif()
-
-# Executable
+# --- Executable ---
 add_executable(sort main.cpp)
 
-# Verlinke Bibliothek (egal ob lokal oder von FetchContent)
-target_link_libraries(sort sfml-graphics sfml-window sfml-system)
+# Linken: FetchContent erzeugt Targets mit dem Prefix sfml-
+target_link_libraries(sort PRIVATE sfml-graphics sfml-window sfml-system)
