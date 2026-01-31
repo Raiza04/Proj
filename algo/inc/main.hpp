@@ -8,23 +8,19 @@
 #include <ctime>
 #include <string>
 
-// Konstanten
 constexpr int WINDOW_WIDTH = 800;
 constexpr int WINDOW_HEIGHT = 600;
 
-// Externe Variablen (Definition in main.cpp)
 extern int BAR_NUM;
 extern float BAR_WIDTH;
 extern int SLEEP_MS;
 
-//vibe coded
 struct Config {
     std::string algorithm = "bubble";
     int bar_num = 300;
     int sleep_ms = 10;
 };
 
-//vibe coded
 Config parseArguments(int argc, char* argv[]);
 void drawArr(sf::RenderWindow& window, int index, std::vector<int>& arr);
 bool sorted(std::vector<int>& arr);
