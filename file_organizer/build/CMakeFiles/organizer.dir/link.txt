@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/organizer.dir/organizer.cpp.o -o organizer 

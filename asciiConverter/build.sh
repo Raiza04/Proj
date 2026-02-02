@@ -5,5 +5,5 @@ mkdir -p build
 cd build
 cmake ..
 make clean
-make
+make -j$(nproc)
 cd ..
