@@ -67,17 +67,3 @@ make clean
 **data.txt**: Data storage (Format: [Status-Bit] [Task-Description]).
 
 **Makefile**: Automation of the compilation process.
-
-💡 Example Preview
-```
-=== MENU ===
-1.) Show all tasks
-2.) Add task
-3.) Delete task
-4.) Edit status
-5.) Exit
-
-Enter your choice: 1
-1.) Create project README  ----- [X]
-2.) Refactor C++ code      ----- [ ]
-```
