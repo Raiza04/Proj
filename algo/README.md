@@ -2,7 +2,7 @@
 
 A real-time sorting algorithm visualization tool built with C++ and SFML. Watch Bubble Sort, Quick Sort, Merge Sort, and Insertion Sort come to life with fully customizable parameters.
 
-![Sort Visualizer Demo](https://via.placeholder.com/800x400?text=Sorting+Visualizer+Demo)
+![Sort Visualizer Demo](./assets/algo.gif)
 
 ## ✨ Features
 
@@ -64,22 +64,22 @@ The `build.sh` script automatically:
 
 **Quicksort with 150 bars at 5ms speed:**
 ```bash
-./build/sortvis -a quick -n 150 -s 5
+./build/sort -a quick -n 150 -s 5
 ```
 
 **Bubblesort with 100 bars at max speed:**
 ```bash
-./build/sortvis -a bubble -n 100 -s 0
+./build/sort -a bubble -n 100 -s 0
 ```
 
 **Mergesort with default settings:**
 ```bash
-./build/sortvis -a merge
+./build/sort -a merge
 ```
 
 **Argument order doesn't matter!**
 ```bash
-./build/sortvis -s 20 -n 200 -a insert  # Same as ./sortvis -a insert -n 200 -s 20
+./build/sort -s 20 -n 200 -a insert  # Same as ./sort -a insert -n 200 -s 20
 ```
 
 ## 📁 Project Structure

@@ -28,7 +28,8 @@ Multiple Output Formats:
 
 
 This project depends on OpenCV (Open Source Computer Vision Library). Before building the project, you must install OpenCV on your system.
-🐧 Linux (Debian/Ubuntu/Pop!_OS)
+
+### 🐧 Linux (Debian/Ubuntu/Pop!_OS)
 
 The easiest way is to use the package manager:
 Bash
@@ -126,10 +127,3 @@ Check the output: The program will generate two files in your current directory:
 │   └── (impl. files)       # Implementation details
 └── build/                  # Compiled executables (created by user)
 ```
-
-
-## ⚙️ Configuration
-
-You can tweak the conversion settings in src/main.cpp:
-
-Resolution: The default width is set to 150 characters. You can adjust this value via flag options (see Usage)
