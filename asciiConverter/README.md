@@ -1,5 +1,8 @@
 # 🎨 **ASCII Art Converter** (C++)
 
+![Ascii earth](./assets/preview.png)
+
+
 A high-performance command-line tool written in C++ that converts standard images into ASCII art. This project leverages OpenCV to process images, convert them to grayscale, and map pixel intensity to ASCII characters.
 
 It not only outputs the ASCII art to the console and a text file but also renders the text back onto a new image file (.png), allowing you to share the result easily as a picture.

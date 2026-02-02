@@ -1,6 +1,6 @@
 # 📝 C++ Terminal Todo List
 
-![Terminal screenshot](./assets/image.png)
+![Todo preview](./assets/image.png)
 
 A lightweight, file-based Todo application for the terminal. Built with C++, this tool allows you to efficiently manage tasks, track their status, and ensure your data is stored persistently.
 
