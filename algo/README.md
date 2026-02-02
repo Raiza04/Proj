@@ -129,18 +129,4 @@ algo/
 **CMake version too old**
 - Update CMake: `pip install --upgrade cmake` or download from [cmake.org](https://cmake.org/download/)
 
-## 🤝 Contributing
-
-Feel free to:
-- Submit issues for bugs or feature requests
-- Fork the repo and create pull requests
-- Add new sorting algorithms
-- Improve visualization effects
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
 **Happy Sorting!** Watch those bars dance! 🕺💃
