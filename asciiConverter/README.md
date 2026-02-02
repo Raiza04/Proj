@@ -7,7 +7,9 @@ A high-performance command-line tool written in C++ that converts standard image
 
 It not only outputs the ASCII art to the console and a text file but also renders the text back onto a new image file (.png), allowing you to share the result easily as a picture.
 
+
 ## 🚀 Features
+
 
 Image Processing: Converts any image format supported by OpenCV (JPG, PNG, BMP, etc.) to grayscale.
 
@@ -21,7 +23,9 @@ Multiple Output Formats:
 
 - Image Render: Generates a high-resolution ascii_output.png containing the drawn text.
 
+
 ## 📦 Prerequisites
+
 
 This project depends on OpenCV (Open Source Computer Vision Library). Before building the project, you must install OpenCV on your system.
 🐧 Linux (Debian/Ubuntu/Pop!_OS)
@@ -34,7 +38,7 @@ sudo apt update
 sudo apt install libopencv-dev
 ```
 
-## 🍎 macOS
+### 🍎 macOS
 
 If you have Homebrew installed, simply run:
 
@@ -42,21 +46,22 @@ If you have Homebrew installed, simply run:
 brew install opencv
 ```
 
-## 🪟 Windows
+### 🪟 Windows
 
 You have two options:
 
-### **Using vcpkg (Recommended):** 
+#### **Using vcpkg (Recommended):** 
 
 ```shell
 vcpkg install opencv
 ```
 
-### **Pre-built Binaries:** 
+#### **Pre-built Binaries:** 
 
 Download from [OpenCV](https://opencv.org/releases/) Releases, extract them, and add the build folder to your System PATH.
 
-🛠️ Build Instructions
+
+## 🛠️ Build Instructions
 
 This project uses CMake for an easy build process.
 
@@ -72,6 +77,7 @@ Create a build directory and compile:
 ```bash
 ./build.sh
 ```
+
 
 ## 💻 Usage
 
@@ -91,6 +97,7 @@ asciiConverter/
 
 **Run the program:** Run the executable from the **`build folder`** and pass the filename (not the full path) as an argument:
 
+
 ## Syntax: 
 
 ```bash
@@ -104,8 +111,8 @@ Check the output: The program will generate two files in your current directory:
 
     ascii_output.png (The image version)
 
-📁 File Structure
-Plaintext
+
+## 📁 File Structure
 
 ```bash
 .
@@ -121,7 +128,7 @@ Plaintext
 ```
 
 
-⚙️ Configuration
+## ⚙️ Configuration
 
 You can tweak the conversion settings in src/main.cpp:
 
