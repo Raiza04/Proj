@@ -10,6 +10,7 @@ Each folder is a standalone project with a clear purpose and its own implementat
 - 📝 **`mini_text_editor`** — Terminal-based mini text editor (C++)
 - ✅ **`todo_list`** — Simple TODO list app (C++)
 - 🗂️ **`file_organizer`** — Utility to sort/organize files (C++)
+- 🧹 **`File Organizer Daemon`** — automate the file_organizer
 - 🧠 **`algo`** — Algorithms / sorting (sometimes visualization)
 - ⚽ **`collision_simulation`** — Simulation / collisions (sometimes visualization)
 - 🔤 **`asciiConverter`** — ASCII / converter tool
