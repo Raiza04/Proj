@@ -1,0 +1,10 @@
+build/
+
+file_daemon
+
+*.log
+organizer_daemon.log
+
+.vscode/
+
+include/
