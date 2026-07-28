@@ -1,0 +1,3 @@
+/home/raiza/hamid/private/gitRepos/Proj/system_monitor/build/CMakeFiles/sysmon.dir
+/home/raiza/hamid/private/gitRepos/Proj/system_monitor/build/CMakeFiles/edit_cache.dir
+/home/raiza/hamid/private/gitRepos/Proj/system_monitor/build/CMakeFiles/rebuild_cache.dir

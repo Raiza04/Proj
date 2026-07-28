@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sysmon.dir/src/main.cpp.o CMakeFiles/sysmon.dir/src/data_fetcher.cpp.o CMakeFiles/sysmon.dir/src/ui_renderer.cpp.o -o sysmon  -lcurses /usr/lib/x86_64-linux-gnu/libform.so 
