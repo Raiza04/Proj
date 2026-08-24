@@ -14,6 +14,8 @@ Each folder is a standalone project with a clear purpose and its own implementat
 - 🧠 **`algo`** — Algorithms / sorting (sometimes visualization)
 - ⚽ **`collision_simulation`** — Simulation / collisions (sometimes visualization)
 - 🔤 **`asciiConverter`** — ASCII / converter tool
+- 💻 **`System monitor`** — minimal system monitor(e.g cpu load, ram usage)
+- 🧭 **`CNav`** — smart opening tool (open any file from any directory)
 
 > Goal: keep projects **small and focused** instead of building one huge app. 🎯
 
@@ -60,14 +62,17 @@ If a project has a different setup, it will be mentioned inside the folder (or y
 ### 🗺️ Repository Structure
 ---
 ```
-Proj/
-├─ algo/
-├─ asciiConverter/
-├─ collision_simulation/
-├─ file_organizer/
-├─ mini_text_editor/
-├─ todo_list/
-└─ README.md
+Proj
+├── algo
+├── asciiConverter
+├── cnav
+├── collision_simulation
+├── daemon-file-organizer
+├── file_organizer
+├── mini_text_editor
+├── README.md
+├── system_monitor
+└── todo_list
 ```
 ---
 
